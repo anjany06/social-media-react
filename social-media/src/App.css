@@ -28,3 +28,23 @@
   margin-left : 10%;
 
 }
+.search{
+  width : 200px;
+  border-right : none;
+  border-radius: 0%;
+}
+.search-box{
+  width : 260px;
+  display : flex;
+  margin-right : 10px;
+
+}
+.search-btn{
+  margin-right : 10px;
+  border-radius: 0%;
+  border-top-right-radius: 12%;
+  border-bottom-right-radius: 12%;
+}
+.text-end{
+  margin-left : 20px;
+}

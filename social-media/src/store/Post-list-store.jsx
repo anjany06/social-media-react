@@ -14,6 +14,8 @@ const postListReducer = (currPostList, action) => {
     newPostList = currPostList.filter(
       (post) => post.id !== action.payload.postId
     );
+  } else if (action.type === "ADD_POST") {
+    newPostList = [action.payload, ...currPostList];
   }
   return newPostList;
 };
@@ -24,7 +26,17 @@ const PostListProvider = ({ children }) => {
   );
 
   const addPost = (userId, postTitle, postBody, tags) => {
-    console.log(`${userId} ${postTitle} ${postBody} ${tags}`);
+    dispatchPostList({
+      type: `ADD_POST`,
+      payload: {
+        id: Date.now(),
+        title: postTitle,
+        body: postBody,
+        reactions: 2,
+        userId: userId,
+        tags: tags,
+      },
+    });
   };
   const deletePost = (postId) => {
     dispatchPostList({
@@ -49,14 +61,6 @@ const PostListProvider = ({ children }) => {
 };
 
 const DEFAULT_POST_LIST = [
-  {
-    id: "1",
-    title: "Going to mumbai",
-    body: "Hi friends, I am going to mumbai for my vacation.",
-    reactions: 2,
-    userId: "user-9",
-    tags: ["vacation", "mumbai", "Enjoying"],
-  },
   {
     id: "2",
     title: "Pass in BCA",

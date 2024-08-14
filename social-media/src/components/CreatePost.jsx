@@ -15,7 +15,12 @@ export default function CreatePost() {
     const userId = userIdElement.current.value;
     const postTitle = postTitleElement.current.value;
     const postBody = postBodyElement.current.value;
-    const tags = tagsElement.current.value.split(/(\s+)/);
+    const tags = tagsElement.current.value.split(" ");
+
+    userIdElement.current.value = "";
+    postTitleElement.current.value = "";
+    postBodyElement.current.value = "";
+    tagsElement.current.value = "";
 
     addPost(userId, postTitle, postBody, tags);
   };

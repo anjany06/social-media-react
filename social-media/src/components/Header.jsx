@@ -1,3 +1,8 @@
+import { FaHome } from "react-icons/fa";
+import { BiSolidMessageSquareDetail } from "react-icons/bi";
+import { MdOutlineExplore } from "react-icons/md";
+import { IoIosNotifications } from "react-icons/io";
+import { CgProfile } from "react-icons/cg";
 export default function Header() {
   return (
     <>
@@ -22,42 +27,41 @@ export default function Header() {
             <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li>
                 <a href="#" className="nav-link px-2 text-secondary">
-                  Home
+                  <FaHome /> Home
                 </a>
               </li>
               <li>
                 <a href="#" className="nav-link px-2 text-white">
-                  Features
+                  <BiSolidMessageSquareDetail /> Inbox
                 </a>
               </li>
               <li>
                 <a href="#" className="nav-link px-2 text-white">
-                  Pricing
+                  <MdOutlineExplore /> Explore
                 </a>
               </li>
               <li>
                 <a href="#" className="nav-link px-2 text-white">
-                  FAQs
+                  <IoIosNotifications /> Notifications
                 </a>
               </li>
               <li>
                 <a href="#" className="nav-link px-2 text-white">
-                  About
+                  <CgProfile /> Profile
                 </a>
               </li>
             </ul>
-
-            <form
-              className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"
-              role="search"
-            >
+            <div className="search-box">
               <input
                 type="search"
-                className="form-control form-control-dark text-bg-dark"
+                className="form-control form-control-dark text-bg-dark search"
                 placeholder="Search..."
                 aria-label="Search"
               />
-            </form>
+              <button className="btn btn-outline-light search-btn">
+                Search
+              </button>
+            </div>
 
             <div className="text-end">
               <button type="button" className="btn btn-outline-light me-2">

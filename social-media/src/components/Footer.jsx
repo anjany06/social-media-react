@@ -10,22 +10,22 @@ export default function Footer() {
           </li>
           <li className="nav-item">
             <a href="#" className="nav-link px-2 text-body-secondary">
-              Features
+              Inbox
             </a>
           </li>
           <li className="nav-item">
             <a href="#" className="nav-link px-2 text-body-secondary">
-              Pricing
+              Explore
             </a>
           </li>
           <li className="nav-item">
             <a href="#" className="nav-link px-2 text-body-secondary">
-              FAQs
+              Notifications
             </a>
           </li>
           <li className="nav-item">
             <a href="#" className="nav-link px-2 text-body-secondary">
-              About
+              Profile
             </a>
           </li>
         </ul>
