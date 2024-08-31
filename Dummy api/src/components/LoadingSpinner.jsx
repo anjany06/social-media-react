@@ -3,9 +3,9 @@ import React from "react";
 function LoadingSpinner() {
   return (
     <>
-      <div class="text-center spinner">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden">Loading...</span>
+      <div className="text-center spinner">
+        <div className="spinner-border" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
       </div>
     </>
