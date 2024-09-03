@@ -22,7 +22,18 @@ export default function CreatePost() {
     postBodyElement.current.value = "";
     tagsElement.current.value = "";
 
-    addPost(userId, postTitle, postBody, tags);
+    fetch("https://dummyjson.com/posts/add", {
+      method: "POST",
+      body: JSON.stringify({
+        title: postTitle,
+        body: postBody,
+        reactions: reactions,
+        userId: userId,
+        tags: tags,
+      }),
+    })
+      .then((res) => res.json())
+      .then((post) => addPost(post));
   };
 
   return (
