@@ -1,4 +1,10 @@
-import { createContext, useCallback, useReducer, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useReducer,
+  useState,
+  useEffect,
+} from "react";
 
 const DEFAULT_CONTEXT = {
   postList: [],
