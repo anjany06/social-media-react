@@ -32,16 +32,6 @@ const PostListProvider = ({ children }) => {
   const [postList, dispatchPostList] = useReducer(postListReducer, []);
   const [fetching, setFetching] = useState(false);
 
-  useEffect(() => {
-    setFetching(true);
-    fetch("https://dummyjson.com/posts")
-      .then((res) => res.json())
-      .then((data) => {
-        addInitialPosts(data.posts);
-        setFetching(false);
-      });
-  }, []);
-
   const addPost = (post) => {
     dispatchPostList({
       type: `ADD_POST`,
